@@ -6,7 +6,6 @@ fi
 
 QEMU_PATH=~/code/qemu/build
 PARSER=$QEMU_PATH/scripts/simpletrace.py
-OPTS=trace-events $1
-PY=python
+PARSER_OPTS="$QEMU_PATH/trace-events-all $1"
 
-$PY $PARSER $OPTS
+$PARSER $PARSER_OPTS
