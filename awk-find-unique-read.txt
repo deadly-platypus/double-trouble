@@ -1,0 +1,18 @@
+{
+    start = substr($0, index($0, "addr=")); 
+    end = index(start, " ") - length("addr="); 
+    addr = substr(start, length("addr=") + 1, end); 
+    if(!reads[addr]) { 
+        reads[addr] = 1 
+    } else { 
+        reads[addr]++ 
+    }; 
+}
+
+END {
+    for(addr in reads) {
+        if(reads[addr] == 1) {
+            printf "%s: %d\n", addr, reads[addr]
+        }
+    }
+}

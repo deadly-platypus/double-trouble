@@ -1,11 +1,19 @@
+To debug the kernel:
+1. ./start-qemu-debug.sh
+2. In a new terminal, `gdb`
+3. `target remote localhost:1234`
+4. `break <break point>`
+5. `continue`
+
 To mount USB file:
 
 In QEMU Monitor:
 1. drive_add 0 id=usb0,if=none,file=images/disk.usb
 2. device_add usb-storage,id=usb0,drive=usb0
 
+To start monitoring:
+1. trace-event *usb*read* on
+
 In cmdline:
 3. mkdir /tmp/usb
 4. mount /dev/sda /tmp/usb
-
-
