@@ -1,3 +1,4 @@
+set pagination off
 break blk_aio_preadv
 
 commands
