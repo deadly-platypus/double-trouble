@@ -1,6 +1,8 @@
 #!/bin/sh
 
 IMG=images/disk.img
+#INIT_RD=initramfs/initramfs.cpio.gz
+#INIT_RD=initramfs/initramfs-busybox-x86.cpio.gz
 INIT_RD=images/raminitfs.img
 USB_IMG=images/disk.usb
 KERNEL=~/code/kernels/gcc-linux/arch/x86_64/boot/bzImage
