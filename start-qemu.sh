@@ -5,7 +5,7 @@ IMG=images/disk.img
 #INIT_RD=initramfs/initramfs-busybox-x86.cpio.gz
 INIT_RD=images/raminitfs.img
 USB_IMG=images/disk.usb
-KERNEL=~/code/kernels/gcc-linux/arch/x86_64/boot/bzImage
+KERNEL=~/code/kernels/ubuntu-build/arch/x86_64/boot/bzImage
 QEMU_PATH=~/code/qemu/build
 QEMU_EXE=x86_64-softmmu/qemu-system-x86_64
 #QEMU_OPTS="-enable-kvm -kernel $KERNEL -hda $IMG -append \"root=/dev/hda single\""
