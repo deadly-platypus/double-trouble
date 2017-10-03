@@ -8,7 +8,7 @@ To debug the kernel:
 To mount USB file:
 
 In QEMU Monitor:
-1. drive_add 0 id=usb0,if=none,file=images/disk.usb,cache=none
+1. drive_add 0 id=usb0,if=none,file=images/disk.fat.usb,cache=none,format=raw
 2. device_add usb-storage,id=usb0,drive=usb0
 
 To start monitoring:
